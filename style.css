@@ -1,0 +1,115 @@
+/* ITHEA holding site - brand colours as confirmed 23/10/2026 */
+:root {
+  --black: #0c0d0f;   /* ITHEA black */
+  --soft: #e7dfe6;    /* soft grey (reads as pale lilac) */
+  --blue: #263cd9;
+  --orange: #f25e0d;
+  --grey: #6a717f;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--black);
+  color: var(--soft);
+  font-family: "Avenir Next", Avenir, "Nunito Sans", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+a { color: var(--orange); text-underline-offset: 3px; }
+a:hover { color: var(--soft); }
+a:focus-visible, .button:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header { padding: 40px 0 8px; }
+
+.logo { display: block; width: 100%; max-width: 560px; height: auto; margin: 0 auto; }
+
+nav { text-align: center; padding: 8px 0 0; }
+nav a { margin: 0 12px; font-size: 1rem; text-decoration: none; color: var(--soft); letter-spacing: 0.04em; }
+nav a:hover, nav a[aria-current="page"] { color: var(--orange); }
+
+main { flex: 1; padding: 24px 0 48px; }
+
+.strapline {
+  text-align: center;
+  font-size: 0.95rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  line-height: 2;
+  margin: 8px 0 40px;
+  color: var(--soft);
+}
+.strapline span { white-space: nowrap; }
+.strapline .sep { color: var(--grey); margin: 0 0.6em; }
+
+h1, h2 { font-weight: 600; line-height: 1.25; margin: 0 0 16px; }
+h1 { font-size: clamp(1.6rem, 4.5vw, 2.2rem); }
+h2 { font-size: 1.3rem; margin-top: 40px; }
+
+.rule { width: 64px; height: 4px; background: var(--blue); border: 0; margin: 0 0 24px; }
+
+p { margin: 0 0 16px; }
+
+.lead { font-size: 1.25rem; }
+
+ul.plain { padding-left: 1.2em; margin: 0 0 16px; }
+ul.plain li { margin-bottom: 8px; }
+ul.plain li::marker { color: var(--orange); }
+
+.notice {
+  margin: 40px 0 0;
+  padding: 20px 24px;
+  border-left: 4px solid var(--orange);
+  background: rgba(231, 223, 230, 0.06);
+}
+.notice p:last-child { margin-bottom: 0; }
+
+.button {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--soft);
+  padding: 14px 28px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+.button:hover { background: var(--soft); color: var(--black); }
+
+address { font-style: normal; margin: 0 0 16px; }
+
+footer {
+  border-top: 1px solid var(--grey);
+  padding: 24px 0 32px;
+  font-size: 0.9rem;
+  color: var(--soft);
+}
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+footer a { color: var(--soft); }
+footer a:hover { color: var(--orange); }
+
+@media (max-width: 480px) {
+  body { font-size: 1.05rem; }
+  header { padding-top: 28px; }
+  .strapline { letter-spacing: 0.08em; font-size: 0.85rem; }
+  .strapline span { display: block; }
+  .strapline br { display: none; }
+  .strapline .sep { display: none; }
+}
